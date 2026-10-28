@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Матеманія - Освітня Платформа</title>
+  <link href="styles.css" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide/dist/lucide.min.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen font-sans flex flex-col">
+  <header class="bg-white shadow-sm py-4 flex items-center justify-center select-none">
+    <h1 class="text-2xl font-bold text-indigo-700">Матеманія</h1>
+  </header>
+  <main class="flex-grow max-w-4xl mx-auto w-full p-4">
+    <section id="home" class="page active text-center">
+      <h2 class="text-4xl font-extrabold text-indigo-700 mb-4">Вивчай математику з задоволенням!</h2>
+      <p class="text-lg text-gray-700 max-w-md mx-auto mb-8">
+        Обирай клас, предмет та тренуйся без реєстрації
+      </p>
+      <div id="classButtons" class="grid grid-cols-3 sm:grid-cols-5 gap-6 justify-center"></div>
+    </section>
+
+    <section id="subject" class="page p-4 hidden">
+      <button id="backToClass" class="flex items-center gap-1 text-indigo-600 hover:underline mb-6" aria-label="Назад до вибору класу">
+        <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-chevron-left" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Назад
+      </button>
+      <h2 id="subjectTitle" class="text-3xl font-semibold mb-4"></h2>
+      <p class="mb-6 text-gray-700">Оберіть предмет:</p>
+      <div id="subjectButtons" class="grid grid-cols-1 sm:grid-cols-3 gap-5"></div>
+    </section>
+
+    <section id="topic" class="page p-4 hidden">
+      <button id="backToSubject" class="flex items-center gap-1 text-indigo-600 hover:underline mb-6" aria-label="Назад до вибору предмета">
+        <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-chevron-left" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Назад
+      </button>
+      <h2 id="topicTitle" class="text-3xl font-semibold mb-4"></h2>
+      <p class="mb-6 text-gray-700">Оберіть тему:</p>
+      <div id="topicButtons" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+    </section>
+
+    <section id="task" class="page p-4 hidden max-w-3xl mx-auto">
+      <button id="backToTopic" class="flex items-center gap-1 text-indigo-600 hover:underline mb-6" aria-label="Назад до вибору теми">
+        <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-chevron-left" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Назад
+      </button>
+      <h3 id="taskTopicName" class="text-2xl font-semibold mb-6"></h3>
+      <div id="taskCard" class="rounded-xl border border-indigo-300 p-6 bg-white shadow-md"></div>
+      <p id="score" class="mt-6 text-gray-600 font-medium"></p>
+    </section>
+  </main>
+  <footer class="py-4 text-center text-gray-400 text-sm select-none">
+    © 2026 Mathmania — безкоштовний сайт для учнів 5-9 класів
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
